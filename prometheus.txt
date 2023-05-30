@@ -1,0 +1,15 @@
+GET / - корневой эндпоинт
+POST /clients - создание нового клиента
+PUT /clients/{client_id} - обновление информации о клиенте
+DELETE /clients/{client_id} - удаление клиента
+POST /newsletters - создание новой рассылки
+GET /newsletters/stats - получение статистики по всем рассылкам
+GET /newsletters/stats/{newsletter_id} - получение статистики по конкретной рассылке
+PUT /newsletters/{newsletter_id} - обновление информации о рассылке
+DELETE /newsletters/{newsletter_id} - удаление рассылки
+POST /messages - отправка сообщения
+
+- Количество запросов к каждому эндпоинту
+- Время отклика на каждый запрос
+- Объем переданных данных
+- Количество ошибок сервера

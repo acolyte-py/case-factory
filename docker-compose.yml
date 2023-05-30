@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:80"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=database_fabric
+    depends_on:
+      - db
+    links:
+      - db
+
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=database_fabric

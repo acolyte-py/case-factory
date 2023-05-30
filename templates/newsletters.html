@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Newsletters</title>
+    </head>
+    <body>
+        <h1>Newsletters</h1>
+        <ul>
+            {% for newsletter in newsletters %}
+                <li><a href="/newsletters/stats/{{ newsletter.id }}">{{ newsletter.message }}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

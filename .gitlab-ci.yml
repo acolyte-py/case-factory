@@ -1,0 +1,17 @@
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  image: python:3.8
+  script:
+    - apt-get update && apt-get install -y build-essential
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+
+test:
+  stage: test
+  image: python:3.8
+  script:
+    - pytest
